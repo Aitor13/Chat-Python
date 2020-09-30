@@ -18,6 +18,7 @@ class Cliente():
         hilo_escucha = Thread(target = self.escucha, daemon = True)
         hilo_escucha.start()
         
+        # your name to show on the chat
         nombre = input('Escribe tu nombre para identificarte en el chat: ')
         
         while True:
