@@ -35,7 +35,7 @@ class Servidor():
     def conexion(self):
         while True:
             try:
-                socketcliente, direccion = self.conn.accept() # este método es bloqueante, habría que utilizar hilos para usar varias conexiones
+                socketcliente, direccion = self.conn.accept() 
                 socketcliente.setblocking(False) # Para poder enviar dos mensajes seguidos desde el mismo cliente, sino se bloquea el socket
                 self.clientes.append(socketcliente)
                 print('Ha llegado una solicitud desde ', direccion)
